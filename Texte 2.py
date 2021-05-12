@@ -3,7 +3,7 @@ import tkinter as tk
 def decalage(lettre_message):
     a=ord(lettre_message)
     if a==97  :
-        return chr(ord('b') + 0)
+        return chr(ord('z') + 0)
     elif a==99 :
         return chr(ord('d') + 0)
     elif a == 100  :
@@ -36,6 +36,9 @@ def decalage(lettre_message):
         return chr(ord('e'))
     elif a == 121  :
         return chr(ord('u'))
+    elif a == 109  :
+        return chr(ord('g'))
+
     else :
         return chr(ord(lettre_message) + 0)
 
