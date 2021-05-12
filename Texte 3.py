@@ -61,13 +61,6 @@ def dechiffrement(texte_a_decoder, cle):
     return texte_decode
 
 
-def dechiffre():
-    if entree_texte.get() == "" or entree_cle.get() == "":
-        resultat.insert(0, "Il manque quelque chose en entrée :/")
-    else:
-        label_res.config(text=dechiffrement(resultat.get(), entree_cle.get()))
-
-
 def chiffre_xor(lettre_message, lettre_cle):
     return chr(ord(lettre_message) ^ ord(lettre_cle))
 
@@ -89,9 +82,6 @@ label_cle.grid(row=1, column=1)
 
 bouton_coder = tk.Button(racine, text="Chiffrer texte", fg="black", width=15, command=chiffre)
 bouton_coder.grid(row=2, column=0)
-
-bouton_decoder = tk.Button(racine, text="Déchiffrer texte", fg="black", width=15, command=dechiffre)
-bouton_decoder.grid(row=2, column=1)
 
 resultat = tk.Entry(racine, width=50, font=("helvetica", "20"))
 resultat.grid(row=3, column=0)
