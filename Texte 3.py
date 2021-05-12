@@ -19,9 +19,10 @@ def decalage(lettre_message, lettre_cle):
                 d = al.index(i)
                 print(d)
         r = b + d
-        if r > 26 :
-            r = r // 26
-        print (r)
+        if r > 25 :
+            r = r % 26
+
+        print ("r = ",r)
         print(al[r])
         p = al[r]
         print (p)
